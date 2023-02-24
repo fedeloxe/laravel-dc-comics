@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController as ComicController;
 
+use App\Http\Controllers\PagesController as PagesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +21,13 @@ use App\Http\Controllers\ComicController as ComicController;
 //     return view('comics', compact('comics'));
 // });
 
-Route::get('/', [ComicController::class, 'getComics']);
+// Route::get('/home', [ComicController::class, 'getComics']);
+
+Route::get('/', [PagesController::class, 'getHome'])->name('homepage');
+
+Route::get('/home', [ComicController::class, 'index'])->name('home');
+
+
 
 Route::get('/single-comic/{id}', function ($id) {
     $comics = config('db.comics');
