@@ -26,18 +26,18 @@ use App\Models\Comic;
 
 Route::get('/', [PagesController::class, 'getHome'])->name('pagina1');
 
-Route::resource('home', ComicsController::class);
+Route::resource('comics', ComicsController::class);
 
 
 
-Route::get('/single-comic/{id}', function ($id) {
-    $comics = Comic::all();
-    $single = '';
-    foreach ($comics as $key => $comic) {
-        if ($id == $key) {
-            $single = $comic;
-        }
-    }
+// Route::get('/single-comic/{id}', function ($id) {
+//     $comics = Comic::all();
+//     $single = '';
+//     foreach ($comics as $key => $comic) {
+//         if ($id == $key) {
+//             $single = $comic;
+//         }
+//     }
 
-    return view('single-comic', compact('comics', 'single'));
-})->name('single-comic');
+//     return view('single-comic', compact('comics', 'single'));
+// })->name('single-comic');
