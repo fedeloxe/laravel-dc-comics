@@ -13,6 +13,7 @@
                         <h3>{{$comic['price']}}</h3>
                         <a href="" class="btn btn-warning btn-square ms-2"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
+                    
 
                 </div>
             </div>
