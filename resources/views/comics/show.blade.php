@@ -1,7 +1,7 @@
+
 @extends('layouts.app')
 @section('content')
-
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col-12">
             <div class="d-flex">
@@ -13,12 +13,13 @@
                         <h3>{{$comic['price']}}</h3>
                         <a href="" class="btn btn-warning btn-square ms-2"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
-                    
+                    <p>{{$comic['series']}}</p>
+
 
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
 
+@endsection
