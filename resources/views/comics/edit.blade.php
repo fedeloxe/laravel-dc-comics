@@ -7,6 +7,17 @@
             <form action="{{route('comics.update', ['comic' => $comic['id']])}}" method="POST">
                 @csrf
                 @method('PUT')
+                <div>
+                    @if($errors->any())
+                    <ul class="text-danger">
+                        @foreach ($errors->all() as $error)
+                        <li>
+                            {{$error}}
+                        </li>
+                        @endforeach
+                    </ul>
+                    @endif
+                </div>
                 <div class="mb-3">
                   <label for="" class="form-label">Modifica titolo</label>
                   <input type="text" class="form-control" id="" aria-describedby="" name="title" value="{{old('title') ?? $comic->title}}">
