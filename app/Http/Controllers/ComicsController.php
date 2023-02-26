@@ -38,7 +38,7 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
         $validator = $request->validate([
-            'title' => 'required|max:25',
+            'title' => 'required|max:100',
             'description' => 'nullable',
             'thumb' => 'required|max:255',
             'price' => 'required|max:50',
@@ -97,7 +97,7 @@ class ComicsController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $validator = $request->validate([
-            'title' => 'required|max:25',
+            'title' => 'required|max:100',
             'description' => 'nullable',
             'thumb' => 'required|max:255',
             'price' => 'required|max:50',
