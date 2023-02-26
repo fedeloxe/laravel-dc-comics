@@ -8,7 +8,7 @@
                 @csrf
                 <div class="mb-3">
                   <label for="" class="form-label">Aggiungi titolo</label>
-                  <input type="text" class="form-control" id="" aria-describedby="" name="titolo">
+                  <input type="text" class="form-control" id="" aria-describedby="" name="title">
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Aggiungi descrizione</label>
@@ -23,11 +23,11 @@
                     <input type="text" class="form-control" id="" aria-describedby="" name="series">
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label">Aggiungi tipo</label>
+                    <label for="" class="form-label">Aggiungi data di vendita</label>
                     <input type="text" class="form-control" id="" aria-describedby="" name="sale_date">
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label">Aggiungi data di vendita</label>
+                    <label for="" class="form-label">Aggiungi tipo</label>
                     <input type="text" class="form-control" id="" aria-describedby="" name="type">
                 </div>
                 <div class="mb-3">

@@ -14,10 +14,13 @@
                         <a href="" class="btn btn-warning btn-square ms-2"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                     <p>{{$comic['series']}}</p>
-
-
                 </div>
             </div>
+        </div>
+        <div class="edit my-5">
+            <a href="{{route('comics.edit', $comic)}}" class="btn btn-info btn-square"><i class="fa-solid fa-pen"></i></a>
+
+
         </div>
     </div>
 </div>

@@ -14,8 +14,14 @@
                         <div class="card-body">
                             <h5>{{$comic['title']}}</h5>
                             <div class="gestione">
-                                <a href="" class="btn btn-warning btn-square"><i class="fa-solid fa-trash"></i></a>
-                                <a href="" class="btn btn-info btn-square"><i class="fa-solid fa-pen"></i></a>
+                                <form class="d-inline-block" method="POST" action="{{route('comics.destroy', ['comic' => $comic->id])}}">
+                                    @csrf
+                                    @method('DELETE')
+                                    {{-- data-cicclo --}}
+                                        <button type="submit" class="footer-button confirm-delete-button btn btn-danger btn-square"><i class="fa-solid fa-trash"></i></button>
+                                    </form>
+                                
+                                <a href="{{route('comics.edit', $comic)}}" class="btn btn-info btn-square"><i class="fa-solid fa-pen"></i></a>
                             </div>
                         </div>
                     </div>
@@ -25,4 +31,5 @@
     </div>
 </div>
 @endsection
+
 
